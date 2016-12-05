@@ -1,0 +1,12 @@
+{
+    "name": "aman/amanvishnani.com",
+    "description": "A portfolio Website",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Aman Vishnani",
+            "email": "aman62@gmail.com"
+        }
+    ],
+    "require": {}
+}
