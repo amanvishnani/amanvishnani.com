@@ -3526,3 +3526,18 @@ a.callbacks_nav.callbacks1_nav.prev {
 		padding: 12px 20px;
 	}
 }
+
+/*PROFILE PICTURE*/
+@media (max-width: 768px) {
+    .aman-profile-pic img {
+        height: 175px;
+        width: 175px;
+    }
+}
+
+@media (min-width: 769px) {
+    .aman-profile-pic img {
+        height: 300px;
+        width: 300px;
+    }
+}
