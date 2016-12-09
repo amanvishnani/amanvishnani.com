@@ -2,6 +2,13 @@
 <html>
 <head>
 	<title>Welcome to AmanVishnani.com</title>
+
+    <!--wow.css-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <!--//wow.css-->
+    <!--animate.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"/>
+    <!--//animate.css-->
     <!--hover.css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.0/css/hover-min.css"/>
     <!--//hover.css-->
@@ -17,7 +24,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords"
-          content="Aman Vishnani, Nanded, VisioTech 2016, amanvishnani/8085,HomeAutomation-Project/server, HomeAutomation-Project/RPi-Client "/>
+          content="Aman Vishnani, Nanded, VisioTech 2016, mummycenter, acclerate business solutions abs amanvishnani/8085,HomeAutomation-Project/server, HomeAutomation-Project/RPi-Client mgmcen gyan mata srtmun"/>
 		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 	<!-- //for-mobile-apps -->
 	<!-- js -->
@@ -33,13 +40,14 @@
 					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
 				});
 			});
+            new WOW().init();
 		</script>
 	<!-- start-smooth-scrolling -->
 
 </head>
 <body>
 <!-- banner -->
-<div class="banner" id="home">
+<div style="height: 100vh" class="banner" id="home">
 	<div class="container"> 
 		<div class="top-header row">
 			<script src="js/classie.js"></script>
@@ -112,8 +120,8 @@
 </div>
 <!--/header-banner-->
 <!--about-->
-<div class="about text-center" id="about">
-	<div class="container">
+<div class="about text-center" style="height: 100vh" id="about">
+    <div class="container wow bounceInUp" data-wow-duration="1.5s">
 		<h3>ABOUT ME</h3>
 		<div class="strip text-center"><img src="images/about.png" alt=" "/></div>
 		<p>I'm Aman Vishnani, 21, from Nanded,India.I am a to-be Computer Engineer and currently learning various programming lanuages to be an efficient software programmer. I am in love with everything that's tech,be it computers, iPhones, laptops, smartphones or whatever. My family and friends come to me whenever they face any technical difficulties on their gizmos. </p>
@@ -128,63 +136,65 @@
 	</div>
 </div>
 <!--//about-->
+<div class="wow bounceInLeft" data-wow-duration="2.5s">
 <div class="about-back"></div>
 <!--my skill-->
 <div class="my-skills text-center">
-	<div class="container">
-		<h3>MY SKILLS</h3>
-		<div class="strip text-center"><img src="images/skill.png" alt=" "/></div>
-		<div class="skill-grids">
-					<div class="col-md-2 skills-grid text-center">
-						<div class="circle" id="circles-1"></div>
-						<p>Editing</p>
-					</div>
-					<div class="col-md-2 skills-grid text-center">
-						<div class="circle" id="circles-2"></div>
-						<p>tweaking</p>
-					</div>
-					<div class="col-md-2 skills-grid text-center">
-						<div class="circle" id="circles-3"></div>
-						<p>coding</p>
-					</div>
-					<div class="col-md-2 skills-grid text-center">
-						<div class="circle" id="circles-4"></div>
-						<p>Hacking</p>
-					</div>
-					<div class="col-md-2 skills-grid text-center">
-						<div class="circle" id="circles-5"></div>
-						<p>network</p>
-					</div>
-					<div class="col-md-2 skills-grid text-center">
-						<div class="circle" id="circles-6"></div>
-						<p>Troubleshooting</p>
-					</div>
-					<div class="clearfix"> </div>
-				 <script type="text/javascript" src="js/circles.js"></script>
-					         <script>
-								var colors = [
-										['#6ed4c0', '#ffffff'], ['#6ed4c0', '#ffffff'], ['#6ed4c0', '#ffffff'], ['#6ed4c0', '#ffffff'], ['#6ed4c0', '#ffffff'], ['#6ed4c0', '#ffffff']
-									];
-								for (var i = 1; i <= 7; i++) {
-									var child = document.getElementById('circles-' + i),
-										percentage = 30 + (i * 10);
-										
-									Circles.create({
-										id:         child.id,
-										percentage: percentage,
-										radius:     80,
-										width:      10,
-										number:   	percentage / 1,
-										text:       '%',
-										colors:     colors[i - 1]
-									});
-								}
-						
-				</script>
-		</div>
-	</div>	
+    <div class="container">
+        <h3>MY SKILLS</h3>
+        <div class="strip text-center"><img src="images/skill.png" alt=" "/></div>
+        <div class="skill-grids">
+            <div class="col-md-2 skills-grid text-center">
+                <div class="circle" id="circles-1"></div>
+                <p>Editing</p>
+            </div>
+            <div class="col-md-2 skills-grid text-center">
+                <div class="circle" id="circles-2"></div>
+                <p>tweaking</p>
+            </div>
+            <div class="col-md-2 skills-grid text-center">
+                <div class="circle" id="circles-3"></div>
+                <p>coding</p>
+            </div>
+            <div class="col-md-2 skills-grid text-center">
+                <div class="circle" id="circles-4"></div>
+                <p>Hacking</p>
+            </div>
+            <div class="col-md-2 skills-grid text-center">
+                <div class="circle" id="circles-5"></div>
+                <p>network</p>
+            </div>
+            <div class="col-md-2 skills-grid text-center">
+                <div class="circle" id="circles-6"></div>
+                <p>Troubleshooting</p>
+            </div>
+            <div class="clearfix"> </div>
+            <script type="text/javascript" src="js/circles.js"></script>
+            <script>
+                var colors = [
+                    ['#6ed4c0', '#ffffff'], ['#6ed4c0', '#ffffff'], ['#6ed4c0', '#ffffff'], ['#6ed4c0', '#ffffff'], ['#6ed4c0', '#ffffff'], ['#6ed4c0', '#ffffff']
+                ];
+                for (var i = 1; i <= 7; i++) {
+                    var child = document.getElementById('circles-' + i),
+                        percentage = 30 + (i * 10);
+
+                    Circles.create({
+                        id:         child.id,
+                        percentage: percentage,
+                        radius:     80,
+                        width:      10,
+                        number:   	percentage / 1,
+                        text:       '%',
+                        colors:     colors[i - 1]
+                    });
+                }
+
+            </script>
+        </div>
+    </div>
 </div>
 <!--//my skill-->
+</div>
 <div class="my-skill-back"></div>
 <!--education-->
 <div class="education text-center">
@@ -193,11 +203,11 @@
 			<h3>EDUCATION</h3>
 		</div>
 		<div class="edu-grids">
-			<div class="col-md-4 edu-grid">
+            <div class="col-md-4 edu-grid wow bounceInUp">
                 <p>2013 - 2017</p>
 				<span>Graduating</span>
-                <div class="edu-border">
-                    <a href="http://www.srtmun.ac.in/en/" class="hvr-float-shadow" target="_blank">
+                <div class="edu-border hvr-float-shadow">
+                    <a href="http://www.srtmun.ac.in/en/" target="_blank">
                         <div class="edu-grid-master">
 						<h3>BACHELOR IN COMPUTER SCI. & ENGR.</h3>
                         <h4>S.R.T.M.U.N.</h4>
@@ -209,7 +219,7 @@
 				</div>
                 </a>
 			</div>
-			<div class="col-md-4 edu-grid">
+            <div class="col-md-4 edu-grid wow bounceInUp" data-wow-delay="0.5s">
 				<p>2011 -2013</p>
 				<span>HSC</span>
                 <a href="http://ymnanded.in/" class="hvr-float-shadow" target="_blank">
@@ -224,7 +234,7 @@
 				</div>
                 </a>
 			</div>
-			<div class="col-md-4 edu-grid">
+            <div class="col-md-4 edu-grid wow bounceInUp" data-wow-delay="1s">
 				<p>2001 - 2011</p>
 				<span>Schooling</span>
                 <a class="hvr-float-shadow" href="http://gyanmatananded.org/" target="_blank">
@@ -255,7 +265,7 @@
 		</div>
 		<div class="strip text-center"><img src="images/work.png" alt=" "/></div>
 		<div class="work-grids">
-            <div class="col-md-offset-2 col-md-4 w-grid">
+            <div class="col-md-offset-2 col-md-4 w-grid wow bounceInLeft">
 				<div class="work-grid">
                     <h3>Summer 2016</h3>
 					<div class="work-grid-info">
@@ -269,7 +279,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-4 w-grid">
+            <div class="col-md-4 w-grid wow bounceInRight">
 				<div class="work-grid">
                     <h3>Summer 2015</h3>
 					<div class="work-grid-info">
@@ -311,18 +321,18 @@
 		<div class="strip text-center"><img src="images/ser.png" alt=" "/></div>
 		<div class="ser-grids">
 			<div class="col-md-4 ser-grid">
-				<div class="ser-imagea"></div>
+                <div class="ser-imagea wow rotateIn" data-wow-delay="0.5s"></div>
 				<h3>Web Design</h3>
 				<p>Desigining a Website is a tidious job. Here I am to Help you out!</p>
 			</div>
 			
 			<div class="col-md-4 ser-grid">
-				<div class="ser-imagec"></div>
+                <div class="ser-imagec wow rotateIn" data-wow-delay="1s"></div>
 				<h3>Content Writer</h3>
 				<p>Worried About Your BLOG ??? Here I am to Help You out! I can write contents on your blog as a guest writer! Moreover I can also do job of an Editor.</p>
 			</div>
 			<div class="col-md-4 ser-grid">
-				<div class="ser-imaged"></div>
+                <div class="ser-imaged wow rotateIn" data-wow-delay="1.5s"></div>
 				<h3>Development</h3>
 				<p>Code Developement is the Key to Engineering!</p>
 			</div>
