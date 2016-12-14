@@ -11,10 +11,50 @@
 		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 	<!-- //for-mobile-apps -->
 	<!-- js -->
+    <!--wow.css-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <!--//wow.css-->
+    <!--animate.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"/>
+    <!--//animate.css-->
+    <!--hover.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.0/css/hover-min.css"/>
+    <!--//hover.css-->
+    <!--fonts-->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet'
+          type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic'
+          rel='stylesheet' type='text/css'>
+    <!--//fonts-->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <!-- js -->
+    <!-- start-smooth-scrolling -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.9/jquery.scrollify.min.js"></script>
+    <!--<script type="text/javascript" src="js/move-top.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>-->
+    <script type="text/javascript">
+        /*    jQuery(document).ready(function ($) {
+         $(".scroll").click(function (event) {
+         event.preventDefault();
+         $('html,body').animate({scrollTop: $(this.hash).offset().top}, 1000);
+         });
+         });*/
+        $(function () {
+            $.scrollify({
+                section: ".scroll-av",
+            });
+        });
+        new WOW().init();
+    </script>
+    <!-- start-smooth-scrolling -->
 </head>
 <body>
 <!-- banner -->
-<div style="height: 100vh" class="banner" id="home">
+<div style="height: 100vh" class="banner scroll-av" id="home">
 	<div class="container"> 
 		<div class="top-header row">
 			<script src="js/classie.js"></script>
@@ -87,7 +127,7 @@
 </div>
 <!--/header-banner-->
 <!--about-->
-<div class="about text-center" style="height: 100vh" id="about">
+<div class="about text-center scroll-av" style="height: 100vh" id="about">
     <div class="container wow bounceInUp" data-wow-duration="1.5s">
 		<h3>ABOUT ME</h3>
 		<div class="strip text-center"><img src="images/about.png" alt=" "/></div>
@@ -106,7 +146,7 @@
 <div class="wow bounceInLeft" data-wow-duration="2.5s">
 <div class="about-back"></div>
 <!--my skill-->
-<div class="my-skills text-center">
+    <div class="my-skills text-center  scroll-av">
     <div class="container">
         <h3>MY SKILLS</h3>
         <div class="strip text-center"><img src="images/skill.png" alt=" "/></div>
@@ -164,7 +204,7 @@
 </div>
 <div class="my-skill-back"></div>
 <!--education-->
-<div class="education text-center">
+<div style="height: 100vh" class="education text-center scroll-av">
 	<div class="container">
 		<div class="edu-info">
 			<h3>EDUCATION</h3>
@@ -224,7 +264,7 @@
 <!--//education-->
 <div class="strip-border"><p></p></div>
 <!--work made comment -->
-<div class="work-experience text-center">
+<div style="height: 100vh" class="work-experience text-center scroll-av">
 
 	<div class="container">
 		<div class="work-info">
@@ -280,7 +320,7 @@
 <div class="services-back"></div>
 
 <!--services-->
-<div class="services text-center" id="services">
+<div style="height: 100vh" class="services text-center scroll-av" id="services">
 	<div class="container">
 		<div class="ser-info">
             <h3>SKILL SET</h3>
@@ -383,7 +423,7 @@
 </div>
 //portfolio-->
 <!--process-->
-<div class="process text-center">
+<div class="process text-center scroll-av">
 	<div class="container">
 		<h3>PROCESS</h3>
 		<div class="strip text-center"><img src="images/pro.png" alt=" "/></div>
@@ -669,7 +709,7 @@
 <!--//blog-->
 <div class="contact-back"></div>
 <!--contact-->
-<div class="contact" id="contact">
+<div class="contact scroll-av" id="contact">
 	<div class="container">
 		<div class="contact-info text-center">
 			<h3>CONTACT</h3>
@@ -698,28 +738,28 @@
 			<div class="clearfix"></div>
 		</div>
 	</div>
-</div>
-<!--//contact-->
-<div class="footer-top"></div>
-<!--resume-->
-<div class="resume text-center">
-	<div class="container">
-		<div class="strip text-center"><a href="#"><img src="images/down.png" alt=" "/></a></div>
-        <div class="down hvr-buzz"><a
-                href="https://drive.google.com/open?id=1XQ0iFmUaDJVYlmdLhsguSjNbxfGNYPjT8Ae3pfq58IQ">Download My
-            Resume</a></div>
-	</div>
+    <!--//contact-->
+    <div class="footer-top"></div>
+    <!--resume-->
+    <div class="resume text-center">
+        <div class="container">
+            <div class="strip text-center"><a href="#"><img src="images/down.png" alt=" "/></a></div>
+            <div class="down hvr-buzz"><a
+                    href="https://drive.google.com/open?id=1XQ0iFmUaDJVYlmdLhsguSjNbxfGNYPjT8Ae3pfq58IQ">Download My
+                Resume</a></div>
+        </div>
 
+    </div>
+    <!--//resume-->
+    <!--footer-->
+    <div class="footer">
+        <div class="container">
+            <p>Copyright &copy; 2014-2017 </a></p>
+        </div>
+    </div>
+    <!--//footer-->
 </div>
-<!--//resume-->
 
-<!--footer-->
-<div class="footer">
-	<div class="container">
-        <p>Copyright &copy; 2014-2017 </a></p>
-	</div>
-</div>
-<!--//footer-->
 <!-- here stars scrolling icon -->
 	<script type="text/javascript">
 		$(document).ready(function() {
@@ -738,39 +778,4 @@
 	</script>
 <!-- //here ends scrolling icon -->
 </body>
-<!--wow.css-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-<!--//wow.css-->
-<!--animate.css-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"/>
-<!--//animate.css-->
-<!--hover.css-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.0/css/hover-min.css"/>
-<!--//hover.css-->
-<!--fonts-->
-<link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet'
-      type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic'
-      rel='stylesheet' type='text/css'>
-<!--//fonts-->
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
-
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<!-- js -->
-<!-- start-smooth-scrolling -->
-<script type="text/javascript" src="js/move-top.js"></script>
-<script type="text/javascript" src="js/easing.js"></script>
-<script type="text/javascript">
-    jQuery(document).ready(function ($) {
-        $(".scroll").click(function (event) {
-            event.preventDefault();
-            $('html,body').animate({scrollTop: $(this.hash).offset().top}, 1000);
-        });
-    });
-    new WOW().init();
-</script>
-<!-- start-smooth-scrolling -->
-
 </html>
