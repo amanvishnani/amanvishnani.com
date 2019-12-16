@@ -14,5 +14,8 @@
   "bugs": {
     "url": "https://github.com/amanvishnani/amanvishnani.com/issues"
   },
-  "homepage": "https://github.com/amanvishnani/amanvishnani.com#readme"
+  "homepage": "https://github.com/amanvishnani/amanvishnani.com#readme",
+  "devDependencies": {
+    "lite-server": "^2.5.4"
+  }
 }
