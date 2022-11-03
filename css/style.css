@@ -407,7 +407,7 @@ padding: 20px 18px;
   color: #c1c1c1;
   font-weight: 500;
 }
-.work-grid-info p{
+.work-grid-info > p, ul{
   font-family: 'Lato', sans-serif;
   line-height: 1.8em;
   margin: 0;
@@ -3540,4 +3540,10 @@ a.callbacks_nav.callbacks1_nav.prev {
         height: 300px;
         width: 300px;
     }
+}
+
+.key-items {
+	padding-left: 50px;
+	padding-top: 20px;
+	text-align: left;
 }
