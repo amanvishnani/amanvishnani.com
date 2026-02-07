@@ -44,13 +44,14 @@
         <!-- Editor Top Tab Bar -->
         <header
             class="flex items-center justify-between border-b border-solid border-border-light dark:border-border-dark bg-editor-header-light/95 dark:bg-editor-header-dark/95 backdrop-blur-md sticky top-0 z-50 px-4 py-0 transition-colors">
-            <div class="flex items-center gap-0 overflow-x-auto">
+            <div class="flex items-center gap-0 overflow-x-auto no-scrollbar">
                 <div
                     class="flex items-center gap-2 px-4 py-3 border-r border-border-light dark:border-border-dark text-primary whitespace-nowrap">
                     <span class="material-symbols-outlined text-[20px]">terminal</span>
                     <h2 class="text-sm font-bold tracking-tight">Portfolio v2.0</h2>
                 </div>
-                <div class="flex items-center h-full" id="header-tabs">
+                <!-- Desktop Tabs -->
+                <div class="hidden md:flex items-center h-full" id="header-tabs">
                     <a id="nav-tab-home"
                         class="nav-link flex items-center gap-2 px-6 py-3 border-r border-border-light dark:border-border-dark text-slate-500 dark:text-slate-400 text-xs font-medium hover:bg-white/50 dark:hover:bg-terminal-gray/50 transition-all border-t-2 border-t-transparent"
                         href="#home">
@@ -76,8 +77,14 @@
                         skills.py
                     </a>
                 </div>
+                <!-- Mobile Active View Indicator -->
+                <div
+                    class="md:hidden flex items-center px-4 text-[10px] font-bold text-slate-400 gap-2 uppercase tracking-widest whitespace-nowrap">
+                    <span class="w-1 h-3 bg-primary rounded-full"></span>
+                    <span id="mobile-view-label">index.js</span>
+                </div>
             </div>
-            <div class="flex items-center gap-4 pr-4">
+            <div class="flex items-center gap-2 md:gap-4 pr-0 md:pr-4">
                 <button onclick="toggleTheme()"
                     class="size-8 rounded-lg bg-primary/10 border border-primary/30 flex items-center justify-center text-primary hover:bg-primary transition-all group">
                     <span class="material-symbols-outlined text-sm dark:group-hover:text-white">dark_mode</span>
@@ -91,6 +98,41 @@
                 </div>
             </div>
         </header>
+
+        <!-- Mobile Bottom Nav -->
+        <nav
+            class="md:hidden fixed bottom-0 left-0 right-0 z-[60] bg-editor-header-light/95 dark:bg-editor-header-dark/95 backdrop-blur-xl border-t border-border-light dark:border-border-dark px-2 pb-6 pt-2 transition-colors">
+            <div class="flex items-center justify-around max-w-sm mx-auto" id="mobile-tabs">
+                <a href="#home"
+                    class="nav-link flex flex-col items-center gap-1 p-2 text-slate-500 dark:text-slate-400 group transition-all">
+                    <span
+                        class="material-symbols-outlined text-[20px] group-[.active]:text-primary transition-colors">home</span>
+                    <span
+                        class="text-[9px] font-bold uppercase tracking-tighter group-[.active]:text-primary">Home</span>
+                </a>
+                <a href="#about"
+                    class="nav-link flex flex-col items-center gap-1 p-2 text-slate-500 dark:text-slate-400 group transition-all">
+                    <span
+                        class="material-symbols-outlined text-[20px] group-[.active]:text-blue-400 transition-colors">description</span>
+                    <span
+                        class="text-[9px] font-bold uppercase tracking-tighter group-[.active]:text-blue-400">About</span>
+                </a>
+                <a href="#experience"
+                    class="nav-link flex flex-col items-center gap-1 p-2 text-slate-500 dark:text-slate-400 group transition-all">
+                    <span
+                        class="material-symbols-outlined text-[20px] group-[.active]:text-green-400 transition-colors">terminal</span>
+                    <span
+                        class="text-[9px] font-bold uppercase tracking-tighter group-[.active]:text-green-400">Proj</span>
+                </a>
+                <a href="#skills"
+                    class="nav-link flex flex-col items-center gap-1 p-2 text-slate-500 dark:text-slate-400 group transition-all">
+                    <span
+                        class="material-symbols-outlined text-[20px] group-[.active]:text-blue-500 transition-colors">grid_view</span>
+                    <span
+                        class="text-[9px] font-bold uppercase tracking-tighter group-[.active]:text-blue-500">Skills</span>
+                </a>
+            </div>
+        </nav>
 
         <div class="flex flex-1 min-h-[calc(100vh-45px)]">
             <!-- Left Sidebar: File Tree -->
@@ -157,14 +199,17 @@
             <main class="flex-1 flex flex-col overflow-y-auto max-h-[calc(100vh-45px)]">
                 <!-- Terminal Hero -->
                 <section id="home"
-                    class="p-8 lg:p-12 border-b border-border-light dark:border-border-dark relative overflow-hidden bg-white/40 dark:bg-transparent transition-colors">
+                    class="p-6 md:p-12 border-b border-border-light dark:border-border-dark relative overflow-hidden bg-white/40 dark:bg-transparent transition-colors min-h-[60vh] flex flex-col justify-center">
                     <div class="absolute inset-0 opacity-10 pointer-events-none">
-                        <div class="absolute top-0 right-0 w-96 h-96 bg-primary blur-[140px] rounded-full"></div>
-                        <div class="absolute bottom-0 left-0 w-96 h-96 bg-cyberpunk-purple blur-[140px] rounded-full">
+                        <div
+                            class="absolute top-0 right-0 w-64 md:96 h-64 md:h-96 bg-primary blur-[100px] md:blur-[140px] rounded-full">
+                        </div>
+                        <div
+                            class="absolute bottom-0 left-0 w-64 md:96 h-64 md:h-96 bg-cyberpunk-purple blur-[100px] md:blur-[140px] rounded-full">
                         </div>
                     </div>
                     <div class="relative z-10 max-w-4xl">
-                        <div class="flex items-center gap-2 mb-6 text-sm">
+                        <div class="flex items-center gap-2 mb-4 md:mb-6 text-xs md:text-sm">
                             <span class="text-primary font-bold dark:text-matrix-green">aman@dev</span>
                             <span class="text-slate-400">:</span>
                             <span class="text-cyberpunk-purple">~</span>
@@ -172,10 +217,11 @@
                             <span class="text-slate-900 dark:text-white blinking-cursor">whoami</span>
                         </div>
                         <h1
-                            class="text-4xl lg:text-7xl font-black text-slate-900 dark:text-white leading-tight mb-8 tracking-tighter">
+                            class="text-[25px] md:text-[43px] lg:text-[67px] font-black text-slate-900 dark:text-white leading-tight mb-6 md:mb-8 tracking-tighter">
                             Aman <span class="text-primary italic">"Fullstack"</span> Vishnani
                         </h1>
-                        <div class="space-y-4 max-w-2xl text-slate-600 dark:text-slate-400 leading-relaxed text-lg">
+                        <div
+                            class="space-y-4 max-w-2xl text-slate-600 dark:text-slate-400 leading-relaxed text-[11px] md:text-[13px]">
                             <p>
                                 <span class="text-slate-400 font-bold mr-2">1.</span> Full Stack Software Engineer
                                 specializing in
@@ -190,16 +236,16 @@
                                 <span class="text-primary font-bold">Government of Canada</span>.
                             </p>
                         </div>
-                        <div class="mt-12 flex flex-wrap gap-4">
+                        <div class="mt-10 md:mt-12 flex flex-wrap gap-3 md:gap-4">
                             <a href="../docs/resume.pdf" target="_blank"
-                                class="flex items-center gap-2 bg-primary hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-bold transition-all transform hover:-translate-y-1 shadow-xl shadow-primary/20">
-                                <span class="material-symbols-outlined">description</span>
-                                Download Resume
+                                class="flex-1 sm:flex-none flex items-center justify-center gap-2 bg-primary hover:bg-blue-700 text-white px-5 md:px-6 py-2.5 md:py-3 rounded-lg font-bold transition-all transform hover:-translate-y-1 shadow-xl shadow-primary/20 text-sm md:text-base">
+                                <span class="material-symbols-outlined text-[20px]">description</span>
+                                Resume
                             </a>
                             <a href="https://www.linkedin.com/in/amanvishnani" target="_blank"
-                                class="flex items-center gap-2 border border-border-light dark:border-border-dark bg-white dark:bg-terminal-gray/50 hover:bg-slate-50 dark:hover:bg-terminal-gray text-slate-900 dark:text-white px-6 py-3 rounded-lg font-bold transition-all">
-                                <span class="material-symbols-outlined">link</span>
-                                LinkedIn.lnk
+                                class="flex-1 sm:flex-none flex items-center justify-center gap-2 border border-border-light dark:border-border-dark bg-white dark:bg-terminal-gray/50 hover:bg-slate-50 dark:hover:bg-terminal-gray text-slate-900 dark:text-white px-5 md:px-6 py-2.5 md:py-3 rounded-lg font-bold transition-all text-sm md:text-base">
+                                <span class="material-symbols-outlined text-[20px]">link</span>
+                                LinkedIn
                             </a>
                         </div>
                     </div>
@@ -605,8 +651,22 @@
         const mainContent = document.querySelector('main');
         const headerLinks = document.querySelectorAll('#header-tabs .nav-link');
         const sidebarLinks = document.querySelectorAll('#sidebar-links .nav-link');
+        const mobileLinks = document.querySelectorAll('#mobile-tabs .nav-link');
+        const mobileLabel = document.getElementById('mobile-view-label');
+
+        const sectionLabels = {
+            'home': 'index.js',
+            'about': 'about.md',
+            'experience': 'experience.sh',
+            'skills': 'skills.py'
+        };
 
         function updateActiveState(activeId) {
+            // Update Mobile Label
+            if (mobileLabel && sectionLabels[activeId]) {
+                mobileLabel.textContent = sectionLabels[activeId];
+            }
+
             // Update Header Tabs
             headerLinks.forEach(link => {
                 const isActive = link.getAttribute('href') === `#${activeId}`;
@@ -628,6 +688,16 @@
                 } else {
                     link.classList.remove('text-primary', 'bg-white', 'dark:bg-primary/10', 'border-border-light', 'dark:border-transparent', 'font-bold');
                     link.classList.add('text-slate-500', 'dark:text-slate-400', 'border-transparent');
+                }
+            });
+
+            // Update Mobile Tabs
+            mobileLinks.forEach(link => {
+                const isActive = link.getAttribute('href') === `#${activeId}`;
+                if (isActive) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
                 }
             });
         }
