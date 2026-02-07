@@ -199,7 +199,7 @@
             <main class="flex-1 flex flex-col overflow-y-auto max-h-[calc(100vh-45px)] pb-20 md:pb-0">
                 <!-- Terminal Hero -->
                 <section id="home"
-                    class="p-6 md:p-12 border-b border-border-light dark:border-border-dark relative overflow-hidden bg-white/40 dark:bg-transparent transition-colors min-h-[60vh] flex flex-col justify-center">
+                    class="p-6 md:p-12 pt-16 md:pt-12 border-b border-border-light dark:border-border-dark relative lg:overflow-hidden bg-white/40 dark:bg-transparent transition-colors min-h-fit md:min-h-[60vh] flex flex-col justify-start md:justify-center">
                     <div class="absolute inset-0 opacity-10 pointer-events-none">
                         <div
                             class="absolute top-0 right-0 w-64 md:96 h-64 md:h-96 bg-primary blur-[100px] md:blur-[140px] rounded-full">
@@ -208,45 +208,74 @@
                             class="absolute bottom-0 left-0 w-64 md:96 h-64 md:h-96 bg-cyberpunk-purple blur-[100px] md:blur-[140px] rounded-full">
                         </div>
                     </div>
-                    <div class="relative z-10 max-w-4xl">
-                        <div class="flex items-center gap-2 mb-4 md:mb-6 text-xs md:text-sm">
-                            <span class="text-primary font-bold dark:text-matrix-green">aman@dev</span>
-                            <span class="text-slate-400">:</span>
-                            <span class="text-cyberpunk-purple">~</span>
-                            <span class="text-slate-400">$</span>
-                            <span class="text-slate-900 dark:text-white blinking-cursor">whoami</span>
+                    <div
+                        class="relative z-10 max-w-6xl flex flex-col lg:flex-row items-center justify-between gap-10 md:gap-12">
+                        <div class="flex-1 max-w-4xl text-center lg:text-left">
+                            <div
+                                class="flex items-center justify-center lg:justify-start gap-2 mb-4 md:mb-6 text-[10px] md:text-sm">
+                                <span class="text-primary font-bold dark:text-matrix-green">aman@dev</span>
+                                <span class="text-slate-400">:</span>
+                                <span class="text-cyberpunk-purple">~</span>
+                                <span class="text-slate-400">$</span>
+                                <span class="text-slate-900 dark:text-white blinking-cursor">whoami</span>
+                            </div>
+                            <h1
+                                class="text-[32px] md:text-[43px] lg:text-[67px] font-black text-slate-900 dark:text-white leading-tight mb-6 md:mb-8 tracking-tighter">
+                                Aman Vishnani
+                            </h1>
+                            <div
+                                class="space-y-4 max-w-2xl mx-auto lg:mx-0 text-slate-600 dark:text-slate-400 leading-relaxed text-[13px] md:text-[14px]">
+                                <p>
+                                    <span class="text-slate-400 font-bold mr-2">1.</span> Full Stack Software Engineer
+                                    specializing in
+                                    <span
+                                        class="text-slate-900 dark:text-white border-b-2 border-primary/30 font-bold">scalable
+                                        enterprise solutions</span>.
+                                </p>
+                                <p>
+                                    <span class="text-slate-400 font-bold mr-2">2.</span> Expert in Python, Java, and
+                                    TypeScript;
+                                    building robust systems at the
+                                    <span class="text-primary font-bold">Government of Canada</span>.
+                                </p>
+                            </div>
+                            <div class="mt-10 md:mt-12 flex flex-wrap justify-center lg:justify-start gap-3 md:gap-4">
+                                <a href="../docs/resume.pdf" target="_blank"
+                                    class="flex-1 sm:flex-none flex items-center justify-center gap-2 bg-primary hover:bg-blue-700 text-white px-5 md:px-6 py-2.5 md:py-3 rounded-lg font-bold transition-all transform hover:-translate-y-1 shadow-xl shadow-primary/20 text-sm md:text-base">
+                                    <span class="material-symbols-outlined text-[20px]">description</span>
+                                    Resume
+                                </a>
+                                <a href="https://www.linkedin.com/in/amanvishnani" target="_blank"
+                                    class="flex-1 sm:flex-none flex items-center justify-center gap-2 border border-border-light dark:border-border-dark bg-white dark:bg-terminal-gray/50 hover:bg-slate-50 dark:hover:bg-terminal-gray text-slate-900 dark:text-white px-5 md:px-6 py-2.5 md:py-3 rounded-lg font-bold transition-all text-sm md:text-base">
+                                    <span class="material-symbols-outlined text-[20px]">link</span>
+                                    LinkedIn
+                                </a>
+                            </div>
                         </div>
-                        <h1
-                            class="text-[25px] md:text-[43px] lg:text-[67px] font-black text-slate-900 dark:text-white leading-tight mb-6 md:mb-8 tracking-tighter">
-                            Aman <span class="text-primary italic">"Fullstack"</span> Vishnani
-                        </h1>
-                        <div
-                            class="space-y-4 max-w-2xl text-slate-600 dark:text-slate-400 leading-relaxed text-[11px] md:text-[13px]">
-                            <p>
-                                <span class="text-slate-400 font-bold mr-2">1.</span> Full Stack Software Engineer
-                                specializing in
-                                <span
-                                    class="text-slate-900 dark:text-white border-b-2 border-primary/30 font-bold">scalable
-                                    enterprise solutions</span>.
-                            </p>
-                            <p>
-                                <span class="text-slate-400 font-bold mr-2">2.</span> Expert in Python, Java, and
-                                TypeScript;
-                                building robust systems at the
-                                <span class="text-primary font-bold">Government of Canada</span>.
-                            </p>
-                        </div>
-                        <div class="mt-10 md:mt-12 flex flex-wrap gap-3 md:gap-4">
-                            <a href="../docs/resume.pdf" target="_blank"
-                                class="flex-1 sm:flex-none flex items-center justify-center gap-2 bg-primary hover:bg-blue-700 text-white px-5 md:px-6 py-2.5 md:py-3 rounded-lg font-bold transition-all transform hover:-translate-y-1 shadow-xl shadow-primary/20 text-sm md:text-base">
-                                <span class="material-symbols-outlined text-[20px]">description</span>
-                                Resume
-                            </a>
-                            <a href="https://www.linkedin.com/in/amanvishnani" target="_blank"
-                                class="flex-1 sm:flex-none flex items-center justify-center gap-2 border border-border-light dark:border-border-dark bg-white dark:bg-terminal-gray/50 hover:bg-slate-50 dark:hover:bg-terminal-gray text-slate-900 dark:text-white px-5 md:px-6 py-2.5 md:py-3 rounded-lg font-bold transition-all text-sm md:text-base">
-                                <span class="material-symbols-outlined text-[20px]">link</span>
-                                LinkedIn
-                            </a>
+
+                        <!-- Profile Image Container -->
+                        <div class="relative group lg:order-last">
+                            <div
+                                class="absolute -inset-1 bg-gradient-to-r from-primary to-cyberpunk-purple rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200">
+                            </div>
+                            <div
+                                class="relative w-56 h-56 md:w-80 md:h-80 rounded-2xl overflow-hidden border border-white/20 dark:border-border-dark shadow-2xl backdrop-blur-sm bg-white/5 p-2">
+                                <img src="../images/profile.jpg" alt="Aman Vishnani"
+                                    class="w-full h-full object-cover rounded-xl filter grayscale contrast-125 group-hover:grayscale-0 transition-all duration-700 select-none">
+                                <div
+                                    class="absolute inset-x-2 bottom-2 bg-slate-900/80 backdrop-blur py-2 px-3 border-t border-white/10 flex items-center justify-between rounded-b-xl opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <span
+                                        class="text-[10px] font-mono text-white/50 tracking-tighter">verified_identity.sig</span>
+                                    <span class="material-symbols-outlined text-matrix-green text-sm">verified</span>
+                                </div>
+                            </div>
+                            <!-- Decorative elements -->
+                            <div
+                                class="absolute -top-3 -right-3 md:-top-4 md:-right-4 w-8 h-8 md:w-12 md:h-12 border-t-2 border-r-2 border-primary rounded-tr-lg opacity-40 group-hover:opacity-100 transition-all">
+                            </div>
+                            <div
+                                class="absolute -bottom-3 -left-3 md:-bottom-4 md:-left-4 w-8 h-8 md:w-12 md:h-12 border-b-2 border-l-2 border-cyberpunk-purple rounded-bl-lg opacity-40 group-hover:opacity-100 transition-all">
+                            </div>
                         </div>
                     </div>
                 </section>
