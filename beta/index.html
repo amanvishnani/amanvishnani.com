@@ -46,7 +46,7 @@
             class="flex items-center justify-between border-b border-solid border-border-light dark:border-border-dark bg-editor-header-light/95 dark:bg-editor-header-dark/95 backdrop-blur-md sticky top-0 z-50 px-4 py-0 transition-colors">
             <div class="flex items-center gap-0 overflow-x-auto no-scrollbar">
                 <div
-                    class="flex items-center gap-2 px-4 py-3 border-r border-border-light dark:border-border-dark text-primary whitespace-nowrap">
+                    class="flex items-center gap-2 px-4 py-3 border-r border-border-light dark:border-border-dark text-primary dark:text-blue-400 whitespace-nowrap">
                     <span class="material-symbols-outlined text-[20px]">terminal</span>
                     <h2 class="text-sm font-bold tracking-tight">Portfolio v2.0</h2>
                 </div>
@@ -90,9 +90,9 @@
                     <span class="material-symbols-outlined text-sm dark:group-hover:text-white">dark_mode</span>
                 </button>
                 <div
-                    class="hidden lg:flex items-center bg-white dark:bg-terminal-gray rounded px-3 py-1 text-[10px] text-slate-500 gap-3 border border-border-light dark:border-border-dark">
-                    <span class="text-primary flex items-center gap-1">
-                        <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+                    class="hidden lg:flex items-center bg-white dark:bg-terminal-gray rounded px-3 py-1 text-[10px] text-slate-500 dark:text-slate-400 gap-3 border border-border-light dark:border-border-dark">
+                    <span class="text-primary dark:text-blue-400 flex items-center gap-1">
+                        <span class="w-1.5 h-1.5 rounded-full bg-primary dark:bg-blue-400 animate-pulse"></span>
                         Live Optimization
                     </span>
                 </div>
@@ -140,7 +140,7 @@
                 class="hidden lg:flex w-64 flex-col border-r border-border-light dark:border-border-dark bg-editor-sidebar-light dark:bg-editor-sidebar-dark p-4 gap-6 transition-colors">
                 <div>
                     <h3
-                        class="text-[11px] font-bold text-slate-500 uppercase tracking-widest mb-4 flex items-center justify-between">
+                        class="text-[11px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest mb-4 flex items-center justify-between">
                         Projects
                         <span class="material-symbols-outlined text-sm">more_horiz</span>
                     </h3>
@@ -183,8 +183,11 @@
                     </div>
                 </div>
                 <div class="mt-auto">
-                    <div class="p-4 bg-primary/5 border border-primary/20 rounded-xl">
-                        <p class="text-[10px] text-primary font-bold mb-1 uppercase tracking-tighter">Status: Active</p>
+                    <div
+                        class="p-4 bg-primary/5 dark:bg-blue-400/5 border border-primary/20 dark:border-blue-400/20 rounded-xl">
+                        <p
+                            class="text-[10px] text-primary dark:text-blue-400 font-bold mb-1 uppercase tracking-tighter">
+                            Status: Active</p>
                         <p class="text-[11px] text-slate-500 dark:text-slate-400 leading-tight">Full Stack Engineer @
                             Government of Canada</p>
                         <button onclick="window.location.href='mailto:admin@amanvishnani.com'"
@@ -236,7 +239,7 @@
                                     <span class="text-slate-400 font-bold mr-2">2.</span> Expert in Python, Java, and
                                     TypeScript;
                                     building robust systems at the
-                                    <span class="text-primary font-bold">Government of Canada</span>.
+                                    <span class="text-primary dark:text-blue-400 font-bold">Government of Canada</span>.
                                 </p>
                             </div>
                             <div class="mt-10 md:mt-12 flex flex-wrap justify-center lg:justify-start gap-3 md:gap-4">
@@ -292,11 +295,14 @@
                                     class="px-2 py-0.5 bg-slate-900 dark:bg-slate-700 text-white text-[12px] rounded">MAN(1)</span>
                                 AMAN_PROFILE
                             </h2>
-                            <span class="text-slate-500 text-sm italic">Status: Verified 2026.02</span>
+                            <span class="text-slate-500 dark:text-slate-400 text-sm italic">Status: Verified
+                                2026.02</span>
                         </div>
                         <div class="space-y-8">
                             <div>
-                                <h3 class="text-primary font-bold text-sm uppercase mb-2 tracking-widest">Description
+                                <h3
+                                    class="text-primary dark:text-blue-400 font-bold text-sm uppercase mb-2 tracking-widest">
+                                    Description
                                 </h3>
                                 <div
                                     class="text-slate-600 dark:text-slate-400 pl-4 border-l-2 border-slate-300 dark:border-slate-800 space-y-4">
@@ -316,26 +322,34 @@
                                 </div>
                             </div>
                             <div>
-                                <h3 class="text-primary font-bold text-sm uppercase mb-2 tracking-widest">Education</h3>
+                                <h3
+                                    class="text-primary dark:text-blue-400 font-bold text-sm uppercase mb-2 tracking-widest">
+                                    Education</h3>
                                 <div class="pl-4 border-l-2 border-slate-300 dark:border-slate-800 space-y-4">
                                     <div class="flex justify-between items-start">
                                         <div class="text-slate-900 dark:text-slate-200 font-bold">Master of Applied
                                             Computer Science</div>
-                                        <div class="text-xs text-slate-500">Dalhousie University • 2020</div>
+                                        <div class="text-xs text-slate-500 dark:text-slate-400">Dalhousie University •
+                                            2020</div>
                                     </div>
-                                    <div class="text-xs text-slate-500 mt-1 pl-4">GPA: 4.15. Focus on Software
+                                    <div class="text-xs text-slate-500 dark:text-slate-400 mt-1 pl-4">GPA: 4.15. Focus
+                                        on Software
                                         Development, Data Engineering, and Machine Learning.</div>
                                     <div class="flex justify-between items-start">
                                         <div class="text-slate-900 dark:text-slate-200 font-bold">Bachelor in Computer
                                             Sci. & Engr.</div>
-                                        <div class="text-xs text-slate-500">S.R.T.M.U.N. • 2017</div>
+                                        <div class="text-xs text-slate-500 dark:text-slate-400">S.R.T.M.U.N. • 2017
+                                        </div>
                                     </div>
-                                    <div class="text-xs text-slate-500 mt-1 pl-4">Foundation in DBMS, Compiler
+                                    <div class="text-xs text-slate-500 dark:text-slate-400 mt-1 pl-4">Foundation in
+                                        DBMS, Compiler
                                         Construction, and Network Security.</div>
                                 </div>
                             </div>
                             <div>
-                                <h3 class="text-primary font-bold text-sm uppercase mb-2 tracking-widest">Certifications
+                                <h3
+                                    class="text-primary dark:text-blue-400 font-bold text-sm uppercase mb-2 tracking-widest">
+                                    Certifications
                                 </h3>
                                 <div class="pl-4 border-l-2 border-slate-300 dark:border-slate-800 space-y-4">
                                     <div class="flex justify-between items-start">
@@ -345,7 +359,7 @@
                                             DeepLearning.AI TensorFlow Developer
                                             <span class="material-symbols-outlined text-sm">link</span>
                                         </a>
-                                        <div class="text-xs text-slate-500">Coursera • 2020</div>
+                                        <div class="text-xs text-slate-500 dark:text-slate-400">Coursera • 2020</div>
                                     </div>
                                     <div class="flex justify-between items-start">
                                         <a href="https://www.coursera.org/account/accomplishments/specialization/UFCAV2K52D3N"
@@ -354,7 +368,7 @@
                                             Deep Learning Specialization
                                             <span class="material-symbols-outlined text-sm">link</span>
                                         </a>
-                                        <div class="text-xs text-slate-500">Coursera • 2019</div>
+                                        <div class="text-xs text-slate-500 dark:text-slate-400">Coursera • 2019</div>
                                     </div>
                                     <div class="flex justify-between items-start">
                                         <a href="https://www.coursera.org/account/accomplishments/specialization/K9R6DFP9PK8U"
@@ -363,7 +377,7 @@
                                             Python for Everybody Specialization
                                             <span class="material-symbols-outlined text-sm">link</span>
                                         </a>
-                                        <div class="text-xs text-slate-500">Coursera • 2017</div>
+                                        <div class="text-xs text-slate-500 dark:text-slate-400">Coursera • 2017</div>
                                     </div>
                                 </div>
                             </div>
@@ -377,7 +391,7 @@
                     id="experience">
                     <div class="max-w-4xl">
                         <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-10 flex items-center gap-3">
-                            <span class="material-symbols-outlined text-primary">history</span>
+                            <span class="material-symbols-outlined text-primary dark:text-blue-400">history</span>
                             git log --experience
                         </h2>
                         <div class="space-y-0 relative">
@@ -393,7 +407,8 @@
                                     <div class="flex flex-wrap items-center gap-3">
                                         <span class="text-primary font-bold text-sm dark:text-yellow-500">commit
                                             gov_cra_v3.0</span>
-                                        <span class="text-slate-500 text-xs">SEPT 2020 – PRESENT</span>
+                                        <span class="text-slate-500 dark:text-slate-400 text-xs">SEPT 2020 –
+                                            PRESENT</span>
                                         <span
                                             class="bg-primary/10 text-primary text-[10px] px-2 py-0.5 rounded font-bold uppercase">Hybrid
                                             / Halifax</span>
@@ -405,27 +420,29 @@
                                         <!-- ePayroll -->
                                         <div
                                             class="bg-editor-sidebar-light/50 dark:bg-terminal-gray/30 p-4 rounded-lg border border-border-light dark:border-border-dark">
-                                            <h4 class="text-sm font-bold text-primary mb-2">The ePayroll Project</h4>
+                                            <h4 class="text-sm font-bold text-primary dark:text-blue-400 mb-2">The
+                                                ePayroll Project</h4>
                                             <p class="text-xs text-slate-600 dark:text-slate-400 mb-3">Developed
                                                 multiple microservices in Java using Quarkus (BDD/TDD). Leveraged Solace
                                                 PubSub+ for event-driven systems and gRPC for service communication.
                                                 Managed CI/CD on OpenShift.</p>
                                             <div class="flex flex-wrap gap-1.5">
                                                 <span
-                                                    class="px-1.5 py-0.5 bg-primary/5 text-[9px] text-slate-500 rounded border border-primary/20 uppercase">Quarkus</span>
+                                                    class="px-1.5 py-0.5 bg-primary/5 dark:bg-blue-400/5 text-[9px] text-slate-500 dark:text-slate-400 rounded border border-primary/20 dark:border-blue-400/20 uppercase">Quarkus</span>
                                                 <span
-                                                    class="px-1.5 py-0.5 bg-primary/5 text-[9px] text-slate-500 rounded border border-primary/20 uppercase">OpenShift</span>
+                                                    class="px-1.5 py-0.5 bg-primary/5 dark:bg-blue-400/5 text-[9px] text-slate-500 dark:text-slate-400 rounded border border-primary/20 dark:border-blue-400/20 uppercase">OpenShift</span>
                                                 <span
-                                                    class="px-1.5 py-0.5 bg-primary/5 text-[9px] text-slate-500 rounded border border-primary/20 uppercase">gRPC</span>
+                                                    class="px-1.5 py-0.5 bg-primary/5 dark:bg-blue-400/5 text-[9px] text-slate-500 dark:text-slate-400 rounded border border-primary/20 dark:border-blue-400/20 uppercase">gRPC</span>
                                                 <span
-                                                    class="px-1.5 py-0.5 bg-primary/5 text-[9px] text-slate-500 rounded border border-primary/20 uppercase">Solace</span>
+                                                    class="px-1.5 py-0.5 bg-primary/5 dark:bg-blue-400/5 text-[9px] text-slate-500 dark:text-slate-400 rounded border border-primary/20 dark:border-blue-400/20 uppercase">Solace</span>
                                             </div>
                                         </div>
 
                                         <!-- InfoDec -->
                                         <div
                                             class="bg-editor-sidebar-light/50 dark:bg-terminal-gray/30 p-4 rounded-lg border border-border-light dark:border-border-dark">
-                                            <h4 class="text-sm font-bold text-primary mb-2">InfoDec Modernization –
+                                            <h4 class="text-sm font-bold text-primary dark:text-blue-400 mb-2">InfoDec
+                                                Modernization –
                                                 Error Correction Portal</h4>
                                             <p class="text-xs text-slate-600 dark:text-slate-400 mb-3">Engineered
                                                 internal portal for catching/correcting tax return errors. Implemented
@@ -433,20 +450,21 @@
                                                 on clean coding.</p>
                                             <div class="flex flex-wrap gap-1.5">
                                                 <span
-                                                    class="px-1.5 py-0.5 bg-primary/5 text-[9px] text-slate-500 rounded border border-primary/20 uppercase">Java</span>
+                                                    class="px-1.5 py-0.5 bg-primary/5 dark:bg-blue-400/5 text-[9px] text-slate-500 dark:text-slate-400 rounded border border-primary/20 dark:border-blue-400/20 uppercase">Java</span>
                                                 <span
-                                                    class="px-1.5 py-0.5 bg-primary/5 text-[9px] text-slate-500 rounded border border-primary/20 uppercase">Angular</span>
+                                                    class="px-1.5 py-0.5 bg-primary/5 dark:bg-blue-400/5 text-[9px] text-slate-500 dark:text-slate-400 rounded border border-primary/20 dark:border-blue-400/20 uppercase">Angular</span>
                                                 <span
-                                                    class="px-1.5 py-0.5 bg-primary/5 text-[9px] text-slate-500 rounded border border-primary/20 uppercase">DB2</span>
+                                                    class="px-1.5 py-0.5 bg-primary/5 dark:bg-blue-400/5 text-[9px] text-slate-500 dark:text-slate-400 rounded border border-primary/20 dark:border-blue-400/20 uppercase">DB2</span>
                                                 <span
-                                                    class="px-1.5 py-0.5 bg-primary/5 text-[9px] text-slate-500 rounded border border-primary/20 uppercase">Jenkins</span>
+                                                    class="px-1.5 py-0.5 bg-primary/5 dark:bg-blue-400/5 text-[9px] text-slate-500 dark:text-slate-400 rounded border border-primary/20 dark:border-blue-400/20 uppercase">Jenkins</span>
                                             </div>
                                         </div>
 
                                         <!-- Knowledge Sharing -->
                                         <div
                                             class="bg-editor-sidebar-light/50 dark:bg-terminal-gray/30 p-4 rounded-lg border border-border-light dark:border-border-dark">
-                                            <h4 class="text-sm font-bold text-primary mb-2">Knowledge Sharing Platform
+                                            <h4 class="text-sm font-bold text-primary dark:text-blue-400 mb-2">Knowledge
+                                                Sharing Platform
                                                 for Tax Administrations</h4>
                                             <p class="text-xs text-slate-600 dark:text-slate-400 mb-3">Built full-stack
                                                 app with Angular and Spring Boot. Wrote complex reporting queries and
@@ -513,15 +531,15 @@
                                     </ul>
                                     <div class="flex flex-wrap gap-2">
                                         <span
-                                            class="px-2 py-1 bg-white dark:bg-terminal-gray text-[10px] rounded border border-border-light dark:border-border-dark text-slate-500 uppercase tracking-tighter">AngularJs</span>
+                                            class="px-2 py-1 bg-white dark:bg-terminal-gray text-[10px] rounded border border-border-light dark:border-border-dark text-slate-500 dark:text-slate-400 uppercase tracking-tighter">AngularJs</span>
                                         <span
-                                            class="px-2 py-1 bg-white dark:bg-terminal-gray text-[10px] rounded border border-border-light dark:border-border-dark text-slate-500 uppercase tracking-tighter">Ionic</span>
+                                            class="px-2 py-1 bg-white dark:bg-terminal-gray text-[10px] rounded border border-border-light dark:border-border-dark text-slate-500 dark:text-slate-400 uppercase tracking-tighter">Ionic</span>
                                         <span
-                                            class="px-2 py-1 bg-white dark:bg-terminal-gray text-[10px] rounded border border-border-light dark:border-border-dark text-slate-500 uppercase tracking-tighter">Spring</span>
+                                            class="px-2 py-1 bg-white dark:bg-terminal-gray text-[10px] rounded border border-border-light dark:border-border-dark text-slate-500 dark:text-slate-400 uppercase tracking-tighter">Spring</span>
                                         <span
-                                            class="px-2 py-1 bg-white dark:bg-terminal-gray text-[10px] rounded border border-border-light dark:border-border-dark text-slate-500 uppercase tracking-tighter">Hibernate</span>
+                                            class="px-2 py-1 bg-white dark:bg-terminal-gray text-[10px] rounded border border-border-light dark:border-border-dark text-slate-500 dark:text-slate-400 uppercase tracking-tighter">Hibernate</span>
                                         <span
-                                            class="px-2 py-1 bg-white dark:bg-terminal-gray text-[10px] rounded border border-border-light dark:border-border-dark text-slate-500 uppercase tracking-tighter">AWS</span>
+                                            class="px-2 py-1 bg-white dark:bg-terminal-gray text-[10px] rounded border border-border-light dark:border-border-dark text-slate-500 dark:text-slate-400 uppercase tracking-tighter">AWS</span>
                                     </div>
                                 </div>
                             </div>
@@ -540,15 +558,15 @@
                             <!-- Category 1 -->
                             <div class="space-y-6">
                                 <h3
-                                    class="text-slate-500 font-bold text-[10px] uppercase tracking-[0.2em] flex items-center gap-2">
-                                    <span class="w-1.5 h-1.5 bg-primary"></span> Backend & Data
+                                    class="text-slate-500 dark:text-slate-400 font-bold text-[10px] uppercase tracking-[0.2em] flex items-center gap-2">
+                                    <span class="w-1.5 h-1.5 bg-primary dark:bg-blue-400"></span> Backend & Data
                                 </h3>
                                 <div class="space-y-4">
                                     <div class="space-y-1">
                                         <div
                                             class="flex justify-between text-[11px] text-slate-600 dark:text-slate-300 mb-1">
                                             <span>Python / Java</span>
-                                            <span class="font-mono text-primary">[PRO]</span>
+                                            <span class="font-mono text-primary dark:text-blue-400">[PRO]</span>
                                         </div>
                                         <div
                                             class="h-1.5 bg-slate-200 dark:bg-terminal-gray rounded-full overflow-hidden border border-slate-300 dark:border-slate-800">
@@ -559,7 +577,7 @@
                                         <div
                                             class="flex justify-between text-[11px] text-slate-600 dark:text-slate-300 mb-1">
                                             <span>RDBMS / SQL</span>
-                                            <span class="font-mono text-primary">[Expert]</span>
+                                            <span class="font-mono text-primary dark:text-blue-400">[Expert]</span>
                                         </div>
                                         <div
                                             class="h-1.5 bg-slate-200 dark:bg-terminal-gray rounded-full overflow-hidden border border-slate-300 dark:border-slate-800">
@@ -570,7 +588,7 @@
                                         <div
                                             class="flex justify-between text-[11px] text-slate-600 dark:text-slate-300 mb-1">
                                             <span>Cloud / AWS</span>
-                                            <span class="font-mono text-primary">[Core]</span>
+                                            <span class="font-mono text-primary dark:text-blue-400">[Core]</span>
                                         </div>
                                         <div
                                             class="h-1.5 bg-slate-200 dark:bg-terminal-gray rounded-full overflow-hidden border border-slate-300 dark:border-slate-800">
@@ -582,7 +600,7 @@
                             <!-- Category 2 -->
                             <div class="space-y-6">
                                 <h3
-                                    class="text-slate-500 font-bold text-[10px] uppercase tracking-[0.2em] flex items-center gap-2">
+                                    class="text-slate-500 dark:text-slate-400 font-bold text-[10px] uppercase tracking-[0.2em] flex items-center gap-2">
                                     <span class="w-1.5 h-1.5 bg-cyberpunk-purple"></span> Frontend & AI
                                 </h3>
                                 <div class="space-y-4">
@@ -627,7 +645,7 @@
 
                 <!-- Footer Status Bar -->
                 <footer
-                    class="mt-auto h-8 bg-primary flex items-center justify-between px-4 text-white text-[10px] font-medium border-t border-white/10 z-50">
+                    class="mt-auto h-8 bg-primary dark:bg-blue-600 flex items-center justify-between px-4 text-white text-[10px] font-medium border-t border-white/10 z-50">
                     <div class="flex items-center gap-4">
                         <div
                             class="flex items-center gap-1 hover:bg-white/10 px-2 h-full cursor-pointer transition-colors">
