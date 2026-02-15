@@ -1,0 +1,405 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aman Vishnani | Full Stack Software Engineer</title>
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0d6efd;
+            --secondary-color: #6c757d;
+            --accent-color: #52edc7;
+            --bg-light: #f8f9fa;
+            --text-dark: #212529;
+            --text-muted: #6c757d;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, #1abc9c 0%, #3498db 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            color: white;
+            padding-top: 118px;
+        }
+
+        .profile-pic {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border: 5px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .section-title {
+            position: relative;
+            margin-bottom: 3rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent-color);
+            border-radius: 2px;
+        }
+
+        .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .edu-item,
+        .work-item {
+            padding: 2rem;
+        }
+
+        .timeline-date {
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .social-links a {
+            font-size: 1.5rem;
+            color: white;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .about-social-links a {
+            font-size: 2rem;
+            color: var(--secondary-color);
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+
+        .about-social-links a:hover {
+            color: var(--primary-color);
+        }
+
+        #contact {
+            background-color: var(--bg-light);
+        }
+
+        .contact-form .form-control {
+            border-radius: 10px;
+            padding: 0.8rem 1.2rem;
+            border: 1px solid #dee2e6;
+        }
+
+        .contact-form .form-control:focus {
+            box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.15);
+        }
+
+        .btn-primary {
+            padding: 0.8rem 2rem;
+            border-radius: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        footer {
+            background-color: #2b2b2b;
+            color: #ccc;
+            padding: 2rem 0;
+        }
+
+        .scroll-margin {
+            scroll-margin-top: 120px;
+        }
+
+        .beta-ribbon {
+            background-color: #000;
+            color: white;
+            padding: 8px 0;
+            text-align: center;
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1031;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .beta-ribbon a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 700;
+            margin-left: 10px;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .beta-ribbon a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        .navbar {
+            top: 38px;
+            /* Height of ribbon */
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                top: 42px;
+                /* Adjusted for mobile wrapping if any */
+            }
+
+            .hero-section {
+                padding-top: 130px !important;
+            }
+
+            .scroll-margin {
+                scroll-margin-top: 130px !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Beta Ribbon -->
+    <div class="beta-ribbon">
+        ✨ Experience the new Terminal-themed portfolio!
+        <a href="beta/index.html">Try Beta <i class="bi bi-arrow-right"></i></a>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">AMAN</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto fw-medium">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section text-center">
+        <div class="container">
+            <img src="images/profile.jpg" alt="Aman Vishnani" class="profile-pic mb-4">
+            <h1 class="display-3 fw-bold mb-2">I'm Aman</h1>
+            <p class="lead mb-4">Full Stack Software Engineer</p>
+            <div class="social-links mb-4">
+                <a href="https://fb.com/aman.vishnani" target="_blank"><i class="bi bi-facebook"></i></a>
+                <a href="https://twitter.com/amudgr8" target="_blank"><i class="bi bi-twitter-x"></i></a>
+                <a href="https://www.linkedin.com/in/amanvishnani" target="_blank"><i class="bi bi-linkedin"></i></a>
+                <a href="mailto:admin@amanvishnani.com"><i class="bi bi-envelope-fill"></i></a>
+            </div>
+            <a href="docs/resume.pdf" class="btn btn-outline-light btn-lg">Download Resume</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 scroll-margin">
+        <div class="container py-5">
+            <h2 class="section-title">About Me</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <p class="lead text-muted mb-4">
+                        I'm Aman Vishnani, from Nanded, India. I am a Full Stack Software Engineer at the Government of
+                        Canada.
+                        I am skilled in Python, RDBMS, Java, and TypeScript/JavaScript. I am an AI enthusiast
+                        acquainted with tools such as TensorFlow & Keras and have knowledge of various deep learning
+                        algorithms.
+                    </p>
+                    <div class="about-social-links">
+                        <a href="https://fb.com/aman.vishnani" target="_blank"><i class="bi bi-facebook"></i></a>
+                        <a href="https://twitter.com/amudgr8" target="_blank"><i class="bi bi-twitter-x"></i></a>
+                        <a href="https://www.linkedin.com/in/amanvishnani" target="_blank"><i
+                                class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-5 bg-light scroll-margin">
+        <div class="container py-5">
+            <h2 class="section-title">Education</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card edu-item">
+                        <span class="timeline-date">2019 - 2020</span>
+                        <h3 class="h5 fw-bold">Master of Applied Computer Science</h3>
+                        <p class="text-primary fw-medium mb-3">Dalhousie University, Halifax</p>
+                        <p class="text-muted small">Graduated with 4.15 GPA. Completed ten graduate level courses and
+                            acquired skills in Software Development, Data Engineering, Machine Learning, Serverless
+                            Technology, Cloud Computing, Android Development, Web Development and Data Warehousing.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card edu-item">
+                        <span class="timeline-date">2013 - 2017</span>
+                        <h3 class="h5 fw-bold">Bachelor in Computer Sci. & Engr.</h3>
+                        <p class="text-primary fw-medium mb-3">S.R.T.M.U.N.</p>
+                        <p class="text-muted small">Base of all of my knowledge, learned DBMS, Compiler Construction,
+                            Software Development, Data Mining, Cryptography, Network Security, Discrete Math,
+                            Information Systems. Also delivered two projects: 8085 simulator and Home Automation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-5 scroll-margin">
+        <div class="container py-5">
+            <h2 class="section-title">Work Experience</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card work-item">
+                        <span class="timeline-date">2020 - Present</span>
+                        <h3 class="h5 fw-bold">Canada Revenue Agency</h3>
+                        <p class="text-primary fw-medium mb-2">CS-02 IT Developer</p>
+                        <p class="small fw-bold text-dark mb-3">“Knowledge Sharing Platform for Tax Administrators”</p>
+                        <ul class="small text-muted ps-3">
+                            <li>Investigate, understand, discuss and analyze Screen Designs from clients to provide
+                                accurate Level of Effort.</li>
+                            <li>Developed fullstack solution along with relevant Unit Testing from screen designs using
+                                TDD.</li>
+                            <li>Understand, assess, test and code review peer developer's tasks to provide accurate
+                                feedback.</li>
+                            <li>Identified several issues in the application and tackled them as part of Tech Debt
+                                items.</li>
+                            <li>Created several reports in PowerBI to provide clients accurate user activity insights in
+                                the application.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card work-item">
+                        <span class="timeline-date">2017 - 2019</span>
+                        <h3 class="h5 fw-bold">DemandFarm Inc.</h3>
+                        <p class="text-primary fw-medium mb-2">Product Engineer</p>
+                        <p class="small fw-bold text-dark mb-3">“K.A.M. Suite”</p>
+                        <p class="small text-muted">Product Design, Architecture, Development and Roadmap Planning.
+                            Designed and developed cross-platform mobile app in Ionic. Wrote product Integration for
+                            various multinational companies with HubSpot and Oracle CRM. Product Deployment on AWS and
+                            Private clouds. Other activities include Mentoring and Recruitment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 scroll-margin">
+        <div class="container py-5">
+            <h2 class="section-title">Contact</h2>
+            <div class="row g-5">
+                <div class="col-lg-5">
+                    <h3 class="h4 fw-bold mb-4">Say Hi to Me</h3>
+                    <p class="text-muted mb-4">I'm always open to discussing new projects, creative ideas or
+                        opportunities to be part of your visions.</p>
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="bg-primary text-white rounded-circle p-2 me-3">
+                            <i class="bi bi-envelope"></i>
+                        </div>
+                        <a href="mailto:admin@amanvishnani.com"
+                            class="text-decoration-none text-dark">admin@amanvishnani.com</a>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="bg-primary text-white rounded-circle p-2 me-3">
+                            <i class="bi bi-globe"></i>
+                        </div>
+                        <a href="http://www.amanvishnani.com"
+                            class="text-decoration-none text-dark">www.amanvishnani.com</a>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="card p-4">
+                        <form action="https://formspree.io/ama62@gmail.com" method="POST" class="contact-form">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Your Name" name="name"
+                                        required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control" placeholder="Your Email" name="_replyto"
+                                        required>
+                                </div>
+                                <div class="col-12">
+                                    <textarea class="form-control" rows="5" placeholder="Your Message" name="message"
+                                        required></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="container">
+            <p class="mb-0">&copy; 2014-2026 Aman Vishnani. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5.3 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
